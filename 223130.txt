@@ -1,0 +1,40 @@
+1.Instalirav GIT i kreirav profil na GITHUB
+2.Go promeniv imeto na glavnata granka od main vo master
+3.Kreirav repozitorium na GITHUB SI_2024_lab1_223130.
+4.Napraviv direktorium so mkdir SI_2024_lab1_223130 vo CLI , vlegov vo nego so cd SI_2024_lab1_223130 i napraviv git init
+5.Go povrzav local repoto so repoto na github so git remote add origin https:://github.com/ivanov1332/SI_2024_lab1_223130.git
+-> git push -u origin master , (imav tuka problemi , pred toa kreirav granka master vo local repo)
+6.Dodadov README.md datoteka so pomos na nano README.md , napisav ime prezime i br na indeks , bidejki e sega modified ja staviv na stage so git add README.md
+pa napraviv git commit -m "Initial commit"
+7.Gi prevzemav slednite tri fajlovi ( rabotev peski , so nano link1.java , go kopirav kodot od git i go pastirav vo mojot .java fajl i zacuvuvav)
+na kraj gi staviv na stage so git add . i povikav git commit -m "Add starter code"
+8.Gi sinhronizirav so git push --all ( isto taka moze i vaka )
+9.Napraviv dve granki git checkout -b bug1 , git checkout -b bug2
+10.Se prefrliv na bug1 , git checkout bug1
+11.Ja popraviv greshkata vo metodot filterOddLengthStrings , staviv vo stage so git add . i povikav git commit -m "Fix wrong condition in filterOddLengthStrings"
+12.Se prefrliv na bug2 , git checkout bug2
+13.Ja popraviv greshkata vo metodot makeBigStringFrom , staviv vo stage so git add . i povikav git commit -m "Fix wrong condition in makeBigStringFrom"
+14.Se vrativ na bug1 , git checkout bug1
+15.Vlegov vo SILab1Main klasata t.e. fajlot link1.java , staviv System.out.println(SILab1_1.filterOddLengthStrings(list));
+, potoa staviv na stage so git add . , pa napraviv commit git commit -m "а Call method filterOddLengthStrings in main class"
+16.Se vrativ na bug2 , git checkout bug2
+17.Vlegov isto taka vo fajlot no na grankata bug2 , link1.java , System.out.println(SILab1_2.makeBigStringFrom(list)); go staviv ova posle for ciklusot , napraviv git add . pa git commit -m " Call method makeBigStringFrom in main class"
+Tuka ke imame conflict ponatamu..
+18.git push origin --all ( sinhroniziram so repoto na github)
+19.git checkout master ( odam na master grankata , se prefrluvam *)
+20.git merge bug1 ( spojuvam master i bug1 , nema da imam konflikt , FF(fast forwarding))
+21.git push origin --all ( povtorno sinhroniziram so repoto na github)
+22.git checkout bug2 ( odam na bug2 grankata )
+23.git rebase master ( site komiti od master gi premestuvam na bug2 da se sinhroniziraat, no tuka ke imame konflikt )
+zatoa vleguvame kade sto ni e mainot 
+nano fajlName
+Menuvame , odnosno ostavame samo eden sout -> na ista linija vo programata imavme ist kod
+go stavam na stage ( git add )
+git rebase --continue - tuka e napraven rebase 
+24.git checkout master ( odam na grankata master )
+25.git merge bug2 ( gi spojuvam master i bug2 , nema da ima konflikti , FF(fast-forwarding))
+26.git push origin --all ( sinhroniziram povtorno so repoto na github)
+27.git push origin bug2 --force ( morav da pushnam so force opcijata )
+28.Kreirav datoteka logs.txt so nano , pred toa so pomosh na git log gi vidov logovite na master grankata gi kopirav i gi staviv vo datotekata logs.txt)
+dodadov 223130.txt so dokumentacija , i napraviv git add , pa gi komitnav
+29. git push origin --all - sinhroniziram povtorno so repo na github
